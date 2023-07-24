@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rohit Kirti" />
+    <title>Geo-Location API</title>
+  </head>
+  <body>
+    <h1>Find your current location using HTML Geolocation API</h1>
+    <button onclick="getLocation()">Get Location</button>
+    <div>
+        <h1 id="location"></h1>
+    </div>
+    <script>
+      let x = document.getElementById("location");
+
+      function getLocation() {
+        if (navigator.geolocation) { //if navigator.geolocation object is present i.e., the browser supports geoloaction
+        //To get the user's current location, getCurrentPosition() method of the navigator.geolocation object is used. This method accepts three parameters- success(A success callback function to get the location of the user), error(An error callback function which takes "Position Error" object as input.), option(It defines various options for getting the location.)
+        navigator.geolocation.getCurrentPosition(displayPosition)
+        } else {
+          alert("Your Browser doesn't support Geolocation");
+        }
+      }
+
+    //  success callback function to be used as success parameter of getCurrentPosition() method
+      function displayPosition(position){ // from the result of the getCurrentPosition() method use the longitude and latitude keys, get the corresponding values
+        let result =  "Latitude: " + position.coords.latitude + ", " + "Longitude: " +   position.coords.longitude;
+        x.innerHTML = result
+      }
+    </script>
+  </body>
+</html>

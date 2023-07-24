@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rohit Kirti" />
+    <title>HTML Web Storage</title>
+  </head>
+  <body>
+    <h1>HTML web Storage</h1>
+    <h3>1st check if browser supports web Storage or not</h3>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <h3>2nd storing the data in localStorage object</h3>
+    <button onclick="storeData()">Store</button>
+    <p id="storedData"></p>
+    <h3>3rd removing a particular data from localStorage</h3>
+    <button onclick="remove('name')">Remove Name</button>
+    <button onclick="remove('city')">Remove City</button>
+    <h3>4th removing all the data from localStorage</h3>
+    <button onclick="clearData()">Clear localStorage</button>
+    <script>
+      function check() {
+        if (typeof Storage !== "undefined") {
+          document.getElementById("result").innerHTML =
+            "Your browser supports the Web Storage.👍";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Your browser does not supports the Web Storage.❌";
+        }
+      }
+
+      // storing the data in localStorage object 
+      function storeData() {
+        localStorage.setItem("name", "Vimdhayak");
+        localStorage.setItem("city", "Dogepur");
+        // document.getElementById('storedData').innerHTML = 'Hi ' + localStorage.name + ' from ' + localStorage.city
+        //either we can use localStorage.keyOfTheData or localStorage.getItems('key') method.
+        document.getElementById('storedData').innerHTML = 'Hi ' + localStorage.getItem('name') + ' from ' + localStorage.getItem('city')
+      }
+
+      //Removing a particular data from localStorage
+      function remove(key) {
+        localStorage.removeItem(key)
+        alert(key + ' Has been removed')
+      }
+
+      //Clearing the localStorage
+      function clearData() {
+        localStorage.clear()
+        alert('localStorage is cleared')
+      }
+    </script>
+  </body>
+</html>

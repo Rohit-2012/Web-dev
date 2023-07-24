@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, Javascript, Rohit" />
+    <meta
+      name="description"
+      content="This webpage is just for practising HTML on notepad"
+    />
+    <meta name="author" content="Rohit" />
+    <meta name="refresh" content="10" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>HTML Practice Page</title>
+  </head>
+  <body>
+    <h1>Heading</h1>
+
+    <!-- Form Tag-->
+    <form action="#">
+      <fieldset>
+        <legend>User Information</legend>
+
+        <!--DataList Tag-->
+        <input type="text" list="myList" />
+        <datalist id="myList">
+          <option value="Rohit Kirti"></option>
+          <option value="Lucky"></option>
+          <option value="Bruce wayne"></option>
+          <option value="Mathew Murdock"></option>
+        </datalist>
+      </fieldset>
+    </form>
+
+    <!--Details Tag-->
+    <details>
+      <summary>Click here for details</summary>
+      <p>This is the details for the above summary</p>
+    </details>
+
+    <!--meter tag-->
+    <p>HTML</p>
+    <meter value="80" min="1" max="100">80 out of 100</meter>
+    <p>CSS</p>
+    <meter value="80" min="1" max="100">80 out of 100</meter>
+    <p>Javascript</p>
+    <meter value="60" min="1" max="100">80 out of 100</meter>
+    <p>React.Js</p>
+    <meter value="60" min="1" max="100">80 out of 100</meter>
+
+    <!--optgroupt Tag-->
+    <div>
+      <label for="dropDown">Select your car</label>
+      <select id="dropDown">
+        <optgroup label="Model">
+          <option value="SUV">SUV</option>
+          <option value="hatchBack">Hatchback</option>
+          <option value="sedan">Sedan</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!--picture Tag-->
+    <div>
+      <picture>
+        <source
+          srcset="
+            https://images.pexels.com/photos/15109908/pexels-photo-15109908/free-photo-of-photograph-of-a-high-brown-fritillary-on-white-flowers.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load
+          "
+          media="(min-width:750px)"
+        />
+        <source
+          srcset="
+            https://images.pexels.com/photos/13405657/pexels-photo-13405657.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load
+          "
+          media="(min-width:450px)"
+        />
+        <img
+          srcset="
+            https://images.pexels.com/photos/16446071/pexels-photo-16446071/free-photo-of-woman-sitting-on-top-of-a-skyscraper-and-taking-a-picture.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load
+          "
+          alt="picture"
+          style="width: auto"
+        />
+      </picture>
+    </div>
+
+    <!--progress Tag (with javascript)-->
+    <script>
+      let progressValue = 0;
+      const handleProgress = () => {
+        let progressStat = document.getElementById("progressBar");
+        setInterval(() => {
+          if (progressValue < 100) {
+            progressValue += 10;
+            progressStat.value = progressValue;
+          }
+          handleProgress();
+        }, 500);
+      };
+    </script>
+    <div>
+      <progress id="progressBar" min="1" max="100"></progress>
+      <button onclick="handleProgress()">Upload</button>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mc Dowell's</td>
+                <td>2</td>
+                <td>₹420</td>
+            </tr>
+            <tr>
+                <td>Magic Moment</td>
+                <td>1</td>
+                <td>₹898</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <th>2</th>
+                <th>₹1318</th>
+            </tr>
+        </tfoot>
+    </table>
+<!-- contenteditable attribute with div-->
+<div contenteditable = true>
+<p>Hi There</p>
+</div>
+<input type="search" name="" id="">
+<input type="month" name="" id="">
+<input type="url" name="" id="">
+<input type="week" name="" id="">
+<input type="date" name="" id="">
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rohit Kirti">
+    <title>HTML 5 Drag and Drop API</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+        #main{
+            border: 1px solid;
+            display: flex;
+            justify-content: space-around;
+        }
+        .droppableContainer{
+            border: 1px solid;
+            width: 210px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        
+        img{
+            box-shadow: 2px 2px 4px black;
+            border-radius: 4px;
+        }
+        #mechanical{
+            background-color: rgb(16, 190, 190);
+        }
+        #informationTech{
+            background-color: rgb(236, 76, 76);
+        }
+    </style>
+    <script>
+        // "drag" function which is called by the "ondragstart" event listener, when the element is dragged
+        const drag = (ev)=>{
+            ev.dataTransfer.setData("text", ev.target.id)  //setData("dataType", value = event.target.id) here type of data is text and value is the id of draggable element
+        }
+
+        // "allowDrop" function is called by "ondragover"  event listener, which is used to prevent the default handling of the element
+        const allowDrop = (ev)=>{
+            ev.preventDefault()
+        }
+
+        // "drop(event)" function defines the action when the draggable element is dropped into the element
+        const drop = (ev)=>{
+            ev.preventDefault()
+            let data = ev.dataTransfer.getData("text") //getting the dragged data and storing it in a variable
+            ev.target.appendChild(document.getElementById(data)) //appending the draggable element inside the target element.
+        }
+    </script>
+</head>
+<body >
+    <h1>HTML Drag and Drop API</h1>
+    <ol>
+       <h3>Steps:-</h3>
+       <li>First use the draggable attribute "true" in the element, which you want to drag.</li>
+       <li>Then specify the action when the element is dragged, by using "ondragstart" attribute, which calls a function, drag(event), which takes event as argument.</li>
+       <li>In the drag function use dataTransfer.setData() method, to set the data type and the value of the dragged data.</li>
+       <li>Use "ondragover" attribute to specify where to drop the element, and it calls a function, "allowDrop(event)", to prevent the default handling of the element as by default we can not drop an element inside another element.</li>
+       <li>In "allowDrop(event)" function, which also takes event as argument, we have to define the event.preventDefault() method.</li>
+       <li>Use the "ondrop" attribute in the element where the draggable element is going to be dropped, which listens when the element is dropped and calls a "drop(event)" function.</li>
+       <li>In "drop(event)" function get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method. Dragged data is the id of the dragged element.</li>
+       <li>Append the dragged element into the drop element.</li> 
+    </ol>
+    <div id="main">
+        <div id="mechanical" class="droppableContainer" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="student2" src="http://placehold.it/200x100?text=Lucky" alt="" draggable="true" ondragstart="drag(event)">
+            <img id="student1" src="http://placehold.it/200x100?text=Rohit" alt="" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div id="informationTech" class="droppableContainer" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        </div>
+    </div>
+</body>
+</html>
