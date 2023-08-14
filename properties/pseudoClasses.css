@@ -1,0 +1,136 @@
+.pseudoSelector{
+    margin-top: 1rem;
+    border: 2px solid white;
+    padding: 1rem;
+}
+a{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 20px;
+    float: left;
+}
+.note{
+    clear: left;
+    color: whitesmoke;
+}
+
+/* ANCHOR PSEUDO-CLASSES */
+/* unvisited link */
+a:link{
+    color: red;
+    background-color: rgb(19, 240, 19);
+}
+/* visited link */
+a:visited{
+    background-color: gray;
+    color: white;
+}
+
+/* mouse over link */
+a:hover{
+    background-color: yellow;
+    color: black;
+}
+
+/* selected link (when the mouse button is pressed) */
+a:active{
+    color: white;
+    background-color: black;
+}
+
+/* Tool Tip on Hover */
+.hoverDiv{
+    color: white;
+    font-size: 20px;
+    margin: 1rem;
+}
+.toolTip{
+    display: none;
+    background-color: antiquewhite;
+    color: black;
+    padding: 0.5rem;
+}
+.hoverDiv:hover .toolTip{
+    display: block;
+}
+
+input{
+    margin: 1rem;
+}
+/* Enabled */
+input:enabled{
+    border: none;
+    outline: 1px solid rgb(248, 0, 0);
+    background-color: rgb(154, 250, 154);
+    height: 20px;
+}
+
+/* Disabled */
+input:disabled{
+    border: none;
+    outline: 1px solid rgb(29, 248, 0);
+    background-color: rgb(255, 37, 37);
+    height: 20px;
+    color: white;
+}
+
+/* Empty */
+.emptyDiv:empty{
+    height: 10px;
+    width: 300px;
+    background-color: aquamarine;
+}
+
+/* Focus */
+input:focus{
+    height: 25px;
+    background-color: white;
+    outline: 1px solid aqua;
+}
+
+/* Pseudo Elements */
+h3{
+    color: white;
+    text-decoration: underline;
+}
+.firstLine, .firstLetter, .before, .after{
+    color: white;
+    font-size: 16px;
+}
+/* ::first-line */
+.firstLine::first-line{
+    color: rgb(0, 255, 0);
+    font-variant: small-caps;
+}
+/* ::first-letter */
+.firstLetter::first-letter{
+    font-size: xx-large;
+    color: red;
+}
+
+/* ::before */
+.before::before{
+    content: 'Before';
+}
+/* ::after */
+.after::after{
+    content: 'After';
+}
+ul, ol{
+    color: white;
+    margin-left: 2rem;
+}
+/* marker */
+::marker{
+    color: rgb(81, 255, 0);
+}
+/* ::section */
+.section{
+    color: white;
+    font-size: 20px;
+    margin-top: 0.5rem;
+}
+.section::selection{
+    background-color: green;
+    color: yellow;
+}

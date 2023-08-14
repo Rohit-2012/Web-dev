@@ -1,0 +1,41 @@
+/* Delcaring the global CSS variables */
+:root{
+    --red: rgb(190, 30, 30);
+    --white: rgb(255, 255, 255);
+    --headingShadow: 2px 2px 4px red, 0px 0px 25px rgb(255, 51, 0), 0px 0px 10px rgb(255, 0, 212); 
+    --divBGColor: linear-gradient(117deg, red, blue);
+    --bgImg: url('https://images.pexels.com/photos/14894269/pexels-photo-14894269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat;
+}
+
+body{
+    background: var(--bgImg);
+    background-size: cover;
+}
+
+.mainHeading{
+    font-size: 50px;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: 1rem;
+    text-shadow: var(--headingShadow);
+}
+div{
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    background: var(--divBGColor);
+
+    /* Below used variable sectionBg will not work here, as it is a local variable */
+    /* background: var(--sectionBg); */
+}
+
+/* Declaring local variables */
+section{
+    --sectionBg: linear-gradient(117deg, rgb(238, 255, 0), rgb(0, 255, 21));
+    --red: white;
+    width: 200px;
+    height: 200px;
+    margin-top: 1rem;
+    border: 10px solid var(--red); /* Local variable will override the global variable in CSS*/
+    background: var(--sectionBg);
+}

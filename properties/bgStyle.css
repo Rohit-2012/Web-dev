@@ -1,0 +1,88 @@
+/* Universal selector */
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    /* background-image: url('https://i.pinimg.com/originals/3d/08/e0/3d08e03cb40252526fee2036a67f07f1.gif'); */
+    background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODEzODI5/particlesjs-examples.gif');
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    font-weight:900;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0), 0 0 20px rgb(251, 255, 0), 0 0 25px rgb(197, 252, 1);
+}
+.propHeading{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-decoration: underline ;
+    margin: 1rem;
+}
+
+/* CSS Background Properties */
+
+.backgrounds{
+    display: flex;
+    justify-content: space-evenly;
+}
+.backgroundDiv{
+    border: 1px solid;
+    height: 200px;
+    width: 250px;
+    margin: 1rem 0;
+}
+/* background-color */
+.bgColor{
+    background-color: rgb(236, 55, 49);
+}
+/* background-image */
+.bgImage{
+    background-image: url('https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&dpr=1');
+}
+/* background-repeat */
+.bgRepeat{
+    background-image: url('https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1');
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: round; */
+    /* background-repeat: space; */
+}
+/* background-attachment */
+.bgAttachment{
+    background-image: url('https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* background-attachment:scroll; */
+}
+/* background-position */
+.bgPosition{
+    background-image: url('https://images.pexels.com/photos/1192027/pexels-photo-1192027.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1');
+    background-repeat: no-repeat;
+    /* background-position: top; */
+    /* background-position: bottom; */
+    /* background-position: right; */
+    /* background-position: right bottom; */
+    /* background-position: left; */
+    /* background-position-x: right; */
+    /* background-position-x: left; */
+    /* background-position-y: bottom; */
+    /* background-position-y: top; */
+    background-position: center;
+}
+/* background Shorthand */
+/* background: color url('') repeat attachment position; */
+/* .backgrounds{
+    background: rgb(255, 170, 170) url('https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1') repeat-x scroll center;
+} */

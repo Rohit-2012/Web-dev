@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rohit Kirti" />
+    <title>CSS Properties</title>
+    <link rel="stylesheet" href="./bgStyle.css" />
+    <link rel="stylesheet" href="./tableAndPositionStyle.css" />
+    <link rel="stylesheet" href="./zIndex.css" />
+    <link rel="stylesheet" href="./overflow.css" />
+    <link rel="stylesheet" href="./pseudoClasses.css" />
+    <link rel="stylesheet" href="./borderImage.css" />
+    <link rel="stylesheet" href="./transform2D.css" />
+    <link rel="stylesheet" href="./transform3D_transition.css" />
+  </head>
+  <body>
+    <h1>CSS Properties</h1>
+    <section class="background">
+      <h2 class="propHeading">BACKGROUND</h2>
+      <div class="backgrounds">
+        <div class="bgColor backgroundDiv"></div>
+        <div class="bgImage backgroundDiv"></div>
+        <div class="bgRepeat backgroundDiv"></div>
+        <div class="bgAttachment backgroundDiv"></div>
+        <div class="bgPosition backgroundDiv"></div>
+      </div>
+    </section>
+    <section class="table">
+      <h2 class="propHeading">TABLE FORMATTING</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>OCCUPATION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Babu Rao</td>
+            <td>53</td>
+            <td>Owner- Star Garage</td>
+          </tr>
+          <tr>
+            <td>Raju</td>
+            <td>35</td>
+            <td>Unemployed</td>
+          </tr>
+          <tr>
+            <td>Shyaam</td>
+            <td>36</td>
+            <td>Unemployed</td>
+          </tr>
+          <tr>
+            <td>Totla Tiwari</td>
+            <td>50</td>
+            <td>Loan Shark</td>
+          </tr>
+          <tr>
+            <td>Kachra Seth</td>
+            <td>49</td>
+            <td>Pawn Shop</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="position">
+      <h2 class="propHeading">POSITION</h2>
+      <div class="positionDiv static">
+        <p>This is position static</p>
+      </div>
+      <div class="positionDiv relative">
+        <p>This is position relative</p>
+      </div>
+      <div class="positionDiv absolute">
+        <p>
+          This is position absolute, relative to the the section with the class
+          "position" because the position of the section is relative
+        </p>
+      </div>
+      <div class="positionDiv fixed">
+        <p>This is position fixed</p>
+      </div>
+      <div class="positionDiv sticky">
+        <p>This is position sticky</p>
+      </div>
+    </section>
+    <section class="zIndex">
+      <h2 class="propHeading">Z-INDEX</h2>
+      <div class="zIndexContainer">
+        <div class="stackBox red">
+          <h2>Z-Index 1</h2>
+        </div>
+        <div class="stackBox green"><h2>Z-Index 2</h2></div>
+        <div class="stackBox yellow"><h2>Z-Index 3</h2></div>
+      </div>
+    </section>
+    <section class="overflow">
+      <h2 class="propHeading">OVERFLOW</h2>
+      <div class="overflowContainer">
+        <div class="overflowBox visible">
+          <h3>Visible</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt
+          amet iure perferendis quisquam porro rem deleniti perspiciatis
+          necessitatibus dicta? Deleniti magni dolores ex atque blanditiis.
+        </div>
+        <div class="overflowBox hidden">
+          <h3>Hidden</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt
+          amet iure perferendis quisquam porro rem deleniti perspiciatis
+          necessitatibus dicta? Deleniti magni dolores ex atque blanditiis.
+          Molestiae dolor laudantium nemo quidem officia illum recusandae,
+          corrupti culpa, voluptatem iusto rem eveniet.
+        </div>
+        <div class="overflowBox scroll">
+          <h3>Scroll</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt
+          amet iure perferendis quisquam porro rem deleniti perspiciatis
+          necessitatibus dicta? Deleniti magni dolores ex atque blanditiis.
+          Molestiae dolor laudantium nemo quidem officia illum recusandae,
+          corrupti culpa, voluptatem iusto rem eveniet.
+        </div>
+        <div class="overflowBox auto">
+          <h3>Auto</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt
+          amet iure perferendis quisquam porro rem deleniti perspiciatis
+          necessitatibus dicta? Deleniti magni dolores ex atque blanditiis.
+          Molestiae dolor laudantium nemo quidem officia illum recusandae,
+          corrupti culpa, voluptatem iusto rem eveniet.
+        </div>
+      </div>
+    </section>
+    <section class="pseudoSelector">
+      <h2 class="propHeading">PSEUDO-CLASSES</h2>
+      <a href="#1">Anchor</a>
+      <p class="note">
+        "a:hover" MUST come after "a:link" and "a:visited" in the CSS definition
+        in order to be effective! a:active MUST come after "a:hover" in the CSS
+        definition in order to be effective! Pseudo-class names are not
+        case-sensitive.
+      </p>
+      <div class="hoverDiv">
+        Hover over this div to see the toolTip 😁
+        <p class="toolTip">Hello mofo I am a toolTip</p>
+      </div>
+      <input type="text" placeholder="Enabled" />
+      <input type="text" value="Disabled" disabled="disabled" />
+      <p class="note">Below is an empty div 👇</p>
+      <div class="emptyDiv"></div>
+      <input type="text" />
+    </section>
+    <section class="pseudoSelector">
+      <h2 class="propHeading">PSEUDO-ELEMENTS</h2>
+      <h3>::first-line-</h3>
+      <p class="firstLine">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        fugiat porro accusamus nobis! Eos repudiandae repellat voluptatum
+        numquam distinctio fugit aliquid ab quasi! Cumque ad nulla fuga sint
+        itaque tenetur ratione dicta, qui labore dolorum officia rem quis
+        veritatis exercitationem voluptatum repellat. Reiciendis, repellat.
+        Saepe quos recusandae, nobis voluptatibus fuga vel, voluptas magnam
+        iusto veniam sint perferendis aperiam repellat. Vel.
+      </p>
+      <h3>::first-letter-</h3>
+      <p class="firstLetter">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        fugiat porro accusamus nobis! Eos repudiandae repellat voluptatum
+        numquam distinctio fugit aliquid ab quasi!
+      </p>
+      <h3>::before-</h3>
+      <p class="before">CONTENT</p>
+      <h3>::after-</h3>
+      <p class="after">CONTENT</p>
+      <h3>::marker-</h3>
+      <ul>
+        <li>Hello</li>
+        <li>Hey</li>
+        <li>Hi</li>
+      </ul>
+      <ol>
+        <li>Hello</li>
+        <li>Hey</li>
+        <li>Hi</li>
+      </ol>
+      <h3>::selection-</h3>
+      <p class="section">Select any portion on this text.</p>
+    </section>
+    <section class="borderImage">
+      <h2 class="propHeading">BORDER-IMAGE</h2>
+      <p class="note">
+        For setting a border image first we have to set the border
+      </p>
+    </section>
+    <section class="transform">
+      <div class="transform2D">
+        <h2 class="propHeading">2D TRANSFORM</h2>
+        <div class="container">
+          <div class="transformBox translate">
+            Hover over the Box to translate
+          </div>
+          <div class="transformBox rotate">
+            Hover over the Box to rotate
+          </div>
+          <div class="transformBox scale">
+            Hover over the Box to scale
+          </div>
+          <div class="transformBox skew">
+            Hover over the Box to skew
+          </div>
+          <div class="transformBox matrix">
+            Hover over the Box to see the affect of matrix method
+          </div>
+        </div>
+      </div>
+      <div class="transform3D">
+        <h2 class="propHeading">3D TRANSFORM</h2>
+        <div class="container">
+          <div class="transformBox rotateX">
+            Hover over the Box to rotate along x-axis
+          </div>
+          <div class="transformBox rotateY">
+            Hover over the Box to rotate along y-axis
+          </div>
+          <div class="transformBox rotateZ">
+            Hover over the Box to rotate along z-axis
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="transition">
+      <h2 class="propHeading">TRANSITION</h2>
+      <div class="transitionBox">
+        Shaktimaan
+      </div>
+    </section>
+  </body>
+</html>

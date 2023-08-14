@@ -1,0 +1,26 @@
+/* body{
+    counter-reset: num;
+    text-align: justify;
+}
+h2::before{
+    counter-increment: num;
+    content: "S. No.  " counter(num) ": ";
+} */
+
+/* For Nesting */
+body{
+    counter-reset: heading;
+}
+h1{
+    counter-reset: subHeading;
+}
+
+h1::before{
+    counter-increment: heading;
+    content: "Heading No.- " counter(heading) '. ';
+}
+
+h2::before{
+    counter-increment: subHeading;
+    content: "Subheading No.- " counter(heading) '.' counter(subHeading) '. ' ;
+}

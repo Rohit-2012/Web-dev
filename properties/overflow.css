@@ -1,0 +1,35 @@
+.overflow{
+    border: 2px solid white;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.overflowContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.overflowBox{
+    border: 1px solid white;
+    padding: 0.4rem;
+    background-color: blanchedalmond;
+    width: 150px;
+    height: 150px;
+}
+
+.visible{
+    /* overflow: visible; */
+    overflow: scroll; /* The scroll value of over is added here so that the text do not overlap the next element, you can remove it and uncomment the above line*/
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+.auto{
+    overflow: auto;
+}

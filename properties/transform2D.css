@@ -1,0 +1,47 @@
+.transform2D{
+    border: 2px solid white;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.transformBox{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(245, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* translate() */
+.translate:hover{
+    transform: translate(50px, 50px);
+}
+
+/* rotate() */
+.rotate:hover{
+    transform: rotate(30deg);
+    /* transform: rotate(-30deg); */
+}
+
+/* scale() */
+.scale:hover{
+    transform: scale(0.6, 0.6);
+}
+
+/* skew() */
+.skew:hover{
+    transform: skew(20deg, 10deg);
+}
+
+/* matrix() */
+.matrix:hover{
+    transform: matrix(0.5, 0.1, -0.1, 0.5, 2, 2);
+}

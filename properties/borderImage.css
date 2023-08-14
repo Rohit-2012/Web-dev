@@ -1,0 +1,6 @@
+.borderImage{
+    border: 10px solid ;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-image: url('https://t3.ftcdn.net/jpg/01/76/78/74/360_F_176787407_RIcp4DNvjtAjBZJcNUEw23RASQ5h2cTJ.jpg') 20 round;
+}

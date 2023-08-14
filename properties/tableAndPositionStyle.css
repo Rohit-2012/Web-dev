@@ -1,0 +1,70 @@
+/* CSS for table */
+table{
+    background-color: aliceblue;
+    width: 50%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+thead{
+    background-color: rgb(38, 134, 38);
+    color: white;
+}
+th, td{
+    border: 1px solid #ddd;
+    text-align: justify;
+    padding-left: 1rem;
+    height: 2rem;
+}
+tr:nth-child(even){
+    background-color: rgb(217, 231, 233);
+}
+tbody tr:hover{
+    background-color: rgb(20, 128, 223);
+}
+
+/* CSS for position properties */
+.position{
+    position: relative;
+    border: 2px solid white;
+    padding: 1rem;
+}
+.positionDiv{
+    background-color: rgb(12, 100, 31);
+    margin: 1rem;
+    padding: 0.6rem;
+    color: white;
+}
+
+/* default position of HTML elements */
+.static{
+    position: static; /* top, bottom, left and right values will not change the positioning of the element */
+}
+
+/* position: relative */
+.relative{
+    position: relative;
+    /* bottom:13px;
+    right: 12px; */
+}
+
+.absolute{
+    /* position: absolute;
+    top: 4px;
+    right: 4px; */
+}
+
+/* position: fixed */
+.fixed{
+    /* position: fixed;
+    bottom: 4px;
+    right: 4px; */
+}
+
+/* position: sticky */
+.sticky{
+    /* position: sticky;
+    bottom: 4px;
+    left: 4px;
+    width: fit-content; */
+}
